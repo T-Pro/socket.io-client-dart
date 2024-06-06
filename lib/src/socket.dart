@@ -168,7 +168,7 @@ class Socket extends EventEmitter {
     }
 
     var packet = {
-      'type': EVENT,
+      'type': binary ? BINARY_EVENT : EVENT,
       'data': sendData,
       'options': {'compress': flags.isNotEmpty == true && flags['compress']}
     };
